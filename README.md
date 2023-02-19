@@ -61,7 +61,7 @@ To Solve the problem, we have to use the following services:
 - **AWS LAMBDA**: Lambda is responsible to tag AWS resource automatically.
 
     - Create a Lambda function with _python 3.9_ runtime and attach the IAM ROLE we created earlier.
-    - upload the lambda.py file or paste the file under the **function code** section of the lambda function.
+    - upload the [lambda.py](https://github.com/vipulJain05/AutoTagResource/blob/master/lambda.py) file or paste the file under the **function code** section of the lambda function.
 - **Cloudwatch**:
 
     - Create a rule in CloudWatch Events to trigger on the Amazon EC2  **RunInstances**  API action. For information, see  [Creating a CloudWatch Events Rule That Triggers on an AWS API Call Using AWS CloudTrail](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/Create-CloudWatch-Events-CloudTrail-Rule.html)  in the Amazon CloudWatch Events User Guide. Use the following settings for the rule:
@@ -75,7 +75,7 @@ To Solve the problem, we have to use the following services:
 
 - After all setup, create an EC2 instance from the AWS console or using CLI and after creating the instance, select the instance, and under the tags section, the required tag is automatically added to the instance like **owner: vipul**.
 
-By using the same way we can add tags to any service AWS based on identity or role. We just need to add the specific operation in the cloudwatch event rule (or create new rules for services other than EC2) and change the lambda.py code to add the tag for that service.
+By using the same way we can add tags to any service AWS based on identity or role. We just need to add the specific operation in the cloudwatch event rule (or create new rules for services other than EC2) and change the [lambda.py](https://github.com/vipulJain05/AutoTagResource/blob/master/lambda.py) code to add the tag for that service.
 
 **NOTE** If we want to attach the tags to those instances which are created by the AWS Autoscaling group (ASG), there are 2 ways to achieve this
 
