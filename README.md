@@ -1,5 +1,5 @@
 
-# # Automatically tag new AWS resources based on identity or role
+# Automatically tag new AWS resources based on identity or role
 ### Problem:
 EC2 instance and Volume to be tagged with the identity of the provisioner upon resource creation. (For example- Tag-name: **_Owner_** Tag-Value: **_Vipul_**)
 
